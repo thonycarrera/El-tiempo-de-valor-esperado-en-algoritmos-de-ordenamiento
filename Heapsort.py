@@ -4,7 +4,17 @@
 # In[13]:
 
 
-#Álgoritmo de ordenación HeapSort
+#Álgoritmo de ordenación Heap sort
+
+
+import random
+
+
+print("Ingrese cuantos numeros aleatorios desea obtener")
+n=int(input())
+arreglo = [random.randint(0,1000) for _ in range(n)]
+print ("vector desordenado")
+print(arreglo)
 
 def heapify(arreglo, n, i): 
     mayor = i 
@@ -32,9 +42,8 @@ def heapSort(arreglo):
         arreglo[i], arreglo[0] = arreglo[0], arreglo[i] 
         heapify(arreglo, i, 0) 
         
-arreglo = [45,62,39,71,63,13,168,888,473,43442,254,534,12,332,243,980,11,8998,1020,77]
+print("el arreglo ordenado")
 heapSort(arreglo)
-print ("El arreglo ordenado es")
 print(arreglo)
 
 def prueba():
